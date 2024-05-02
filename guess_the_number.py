@@ -74,7 +74,7 @@ class Gameplay:
 
     def check_guess(self):
         user_guess = int(self.guess_entry.get())
-        if user_guess < self.low_thres or user_guess > self.high_thres:
+        if user_guess <= self.low_thres or user_guess >= self.high_thres:
             tkinter.messagebox.showinfo("Error","Your number is not valid! Please type again!")
             self.guess_entry.delete(0, tk.END)
         else:
