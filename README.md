@@ -20,15 +20,15 @@ This is a simple guessing game built using Python's Tkinter library. The game ge
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/guess-the-number.git
-   
+   ```
 2.Navigate to the project directory:
  ```bash
  cd guess-the-number
-
+```
  3.Run the game:
 ```bash
  python guess_the_number.py
- 
+ ```
 ## Usage
 
 - When prompted, input a number between 1 and 1000 and click "Check".
