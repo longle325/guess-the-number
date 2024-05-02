@@ -17,7 +17,7 @@ class Gamesetup :
         self.result_label = tk.Label(self.window, text="", font=("Arial", 12), bg="#737373", fg="black")
         self.secret_button = tk.Button(window, text="I don't want to know the secret number", font=("Arial", 12), command=self.gen_secret,width=30)
         self.secret_button.place(x=200, y=285)
-        self.genrand_button = tk.Button(window, text="Generate random number", font=("Arial", 12), command=self.gen_rand,width=30)
+        self.genrand_button = tk.Button(window, text="Generate a random number", font=("Arial", 12), command=self.gen_rand,width=30)
         self.genrand_button.place(x=200, y=240)
         self.start_button = tk.Button(window, text="Start", font=("Arial", 12), command=self.start,width=15)
         self.start_button.place(x=260, y=330)
