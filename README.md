@@ -18,15 +18,15 @@ This is a simple guessing game built using Python's Tkinter library. The game ge
 ## How to Run
 
 1. Clone the repository:
-   '''bash
+   ```bash
    git clone https://github.com/your-username/guess-the-number.git
    
 2.Navigate to the project directory:
- '''bash
+ ```bash
  cd guess-the-number
 
  3.Run the game:
-'''bash
+```bash
  python guess_the_number.py
  
 ## Usage
