@@ -1,10 +1,10 @@
 # Guess The Number Game
 
-This is a simple guessing game built using Python's Tkinter library. The game generates a secret number between 1 and 1000, and the player has to guess the number within the given range.
+This is a simple guessing game built using Python's Tkinter library. The game generates a secret number between 1 and 1000, and the player has to guess the number within the given range (or you can choose a number and someone else will guess).
 
 
 ## Features
-
+- You can either be the player or the one who picks the numbers
 - Allows the player to input a number to guess.
 - Provides feedback on whether the guess is too high, too low, or correct.
 - Validates user input to ensure it falls within the valid range.
@@ -30,7 +30,7 @@ cd guess-the-number
 python guess_the_number.py
  ```
 ## Usage
-
+- 
 - When prompted, input a number between 1 and 1000 and click "Check".
 - If the guess is incorrect, the game will provide feedback on whether the guess is too high or too low.
 - If the guess is correct, a congratulatory message will be displayed, and the player can choose to play again or exit.
