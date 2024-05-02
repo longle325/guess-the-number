@@ -37,7 +37,8 @@ This is a simple guessing game built using Python's Tkinter library. The game ge
 
 ## Screenshots
 
-![image](https://github.com/longle325/guess-the-number/assets/140832783/ab77df61-812d-4111-8af8-e62399c469ad)
+![image](https://github.com/longle325/guess-the-number/assets/140832783/b3741c53-2427-4467-a3f7-418e2b64508e)
+
 
 
 
