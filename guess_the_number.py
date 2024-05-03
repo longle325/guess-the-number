@@ -76,32 +76,36 @@ class Gameplay:
         self.check_button.place(x=270, y=245) 
 
     def check_guess(self):
-        user_guess = int(self.guess_entry.get())
-        if  user_guess < self.low_thres or user_guess > self.high_thres:
-            tkinter.messagebox.showinfo("Error","Your number is not valid! Please type again!")
-            self.guess_entry.delete(0, tk.END)
-        else:
-            if user_guess == self.secret_number:
-                self.result_label.config(text=f"{user_guess} is the secret number! ")
-                self.result_label.place(x=220, y=170)
-                self.guess_entry.delete(0, tk.END)
-                tkinter.messagebox.showinfo("Congratulations","You made it!")
-                self.check_button.place_forget()
-                self.try_again_button = tk.Button(self.window, text="Try Again", font=("Arial", 12),command=self.start_new_game)
-                self.try_again_button.place(x=240, y=240)
-
-                self.exit_button = tk.Button(self.window, text="Exit", font=("Arial", 12), command=window.destroy)
-                self.exit_button.place(x=240, y=280)
-            elif user_guess < self.secret_number:
-                self.low_thres = user_guess
-                self.result_label.config(text=f"({self.low_thres} - {self.high_thres})")
-                self.result_label.place(x=255, y=170)
+        try :
+            user_guess = int(self.guess_entry.get())
+            if  user_guess < self.low_thres or user_guess > self.high_thres:
+                tkinter.messagebox.showinfo("Error","Your number is not valid! Please type again!")
                 self.guess_entry.delete(0, tk.END)
             else:
-                self.high_thres = user_guess
-                self.result_label.config(text=f"({self.low_thres} - {self.high_thres})")
-                self.result_label.place(x=255, y=170)
-                self.guess_entry.delete(0, tk.END)
+                if user_guess == self.secret_number:
+                    self.result_label.config(text=f"{user_guess} is the secret number! ")
+                    self.result_label.place(x=220, y=170)
+                    self.guess_entry.delete(0, tk.END)
+                    tkinter.messagebox.showinfo("Congratulations","You made it!")
+                    self.check_button.place_forget()
+                    self.try_again_button = tk.Button(self.window, text="Try Again", font=("Arial", 12),command=self.start_new_game)
+                    self.try_again_button.place(x=240, y=240)
+
+                    self.exit_button = tk.Button(self.window, text="Exit", font=("Arial", 12), command=window.destroy)
+                    self.exit_button.place(x=240, y=280)
+                elif user_guess < self.secret_number:
+                    self.low_thres = user_guess
+                    self.result_label.config(text=f"({self.low_thres} - {self.high_thres})")
+                    self.result_label.place(x=255, y=170)
+                    self.guess_entry.delete(0, tk.END)
+                else:
+                    self.high_thres = user_guess
+                    self.result_label.config(text=f"({self.low_thres} - {self.high_thres})")
+                    self.result_label.place(x=255, y=170)
+                    self.guess_entry.delete(0, tk.END)
+        except ValueError : 
+            tkinter.messagebox.showinfo("Error","Your number is not valid! Please type again!")
+            self.guess_entry.delete(0, tk.END)
     def start_new_game(self):
         self.guess_entry.place_forget()
         self.result_label.place_forget()
